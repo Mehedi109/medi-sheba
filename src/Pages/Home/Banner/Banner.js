@@ -10,8 +10,10 @@ const Banner = () => {
         <Carousel.Item className="carousel-item">
           <img
             className="d-block w-100 img-fluid"
-            src="https://i.ibb.co/vjC6Rpb/photo-1532938911079-1b06ac7ceec7-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwx-Mj-A3f-DB8-MXxhb.jpg"
-            alt="First slide"
+            // src="https://i.ibb.co/vjC6Rpb/photo-1532938911079-1b06ac7ceec7-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwx-Mj-A3f-DB8-MXxhb.jpg"
+            // alt="First slide"
+            src="https://i.ibb.co/yRyXwcY/michael-longmire-L9-EV3-Oog-Lh0-unsplash.jpg"
+            alt=""
           />
           <Carousel.Caption>
             <h3>First slide label</h3>
