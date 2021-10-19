@@ -1,9 +1,17 @@
 import React from 'react';
 import { Card, Container, Col, CardGroup } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 import './Service.css';
 
 const Service = ({ service }) => {
-  const { img, name, description } = service;
+  const { id, img, name, description } = service;
+  const history = useHistory();
+
+  const url = `/service/${id}`;
+
+  const handleServiceDetails = () => {
+    history.push(url);
+  };
   return (
     // <Container>
     <Col xs={12} md={8} lg={4} className="g-5">
@@ -25,7 +33,12 @@ const Service = ({ service }) => {
               </Card.Text>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Last updated 3 mins ago</small>
+              <button
+                onClick={handleServiceDetails}
+                className="btn btn-primary"
+              >
+                Details
+              </button>
             </Card.Footer>
           </Card>
         </CardGroup>
