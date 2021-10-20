@@ -1,0 +1,10 @@
+@media (max-width: 688px) and (min-width: 360px) {
+  .about-image {
+    display: block;
+    width: 400px;
+  }
+  .about-description {
+    display: block;
+    width: 400px;
+  }
+}

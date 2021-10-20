@@ -6,19 +6,27 @@ import './Header.css';
 
 const Header = () => {
   const { user, logOut } = useAuth();
+  console.log(user?.displayName);
+  console.log(user);
   return (
     <div className="header">
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Brand href="#home">MediSheba</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto menu d-flex justify-content-evenly">
-              <Nav.Link href="/home">Home</Nav.Link>
-              <Nav.Link href="/home">About</Nav.Link>
-              <Nav.Link href="/home">Services</Nav.Link>
-              {user.email ? (
-                <Button onClick={logOut}></Button>
+              <Nav.Link as={Link} to="/home">
+                Home
+              </Nav.Link>
+              <Nav.Link as={Link} to="/about">
+                About
+              </Nav.Link>
+              <Nav.Link as={Link} to="/contact">
+                Contact
+              </Nav.Link>
+              {user?.email ? (
+                <Button onClick={logOut}>Logout</Button>
               ) : (
                 <Nav.Link as={Link} to="/login">
                   Login
@@ -26,9 +34,8 @@ const Header = () => {
               )}
             </Nav>
             <Nav className="">
-              <Nav.Link href="#deets">More deets</Nav.Link>
               <Nav.Link eventKey={2} href="">
-                {user.displayName}
+                {user?.displayName}
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

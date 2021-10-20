@@ -3,17 +3,20 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider,
   signOut,
   onAuthStateChanged,
   updateProfile,
 } from 'firebase/auth';
 import initializeAuthentication from '../Pages/Login/Firebase/firebase.init';
+import { useHistory, useLocation } from 'react-router';
 initializeAuthentication();
 
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState();
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isLogin, setIsLogin] = useState(false);
@@ -21,7 +24,12 @@ const useFirebase = () => {
 
   const auth = getAuth();
 
+  // const location = useLocation();
+  // const history = useHistory();
+  // const redirect_uri = location.state?.from;
+
   const handleRegistration = (e) => {
+    // history.push(redirect_uri);
     e.preventDefault();
     if (password.length < 6) {
       setError('Password must be at least 6 charecters long');
@@ -31,6 +39,7 @@ const useFirebase = () => {
       setError('Password must contain to uppercase');
       return;
     }
+
     // createUserWithEmailAndPassword(auth, email, password).then((result) => {
     //   const user = result.user;
     //   console.log(result.user);
@@ -39,16 +48,29 @@ const useFirebase = () => {
     isLogin ? userLogin(email, password) : createNewUser(email, password);
   };
 
-  const userLogin = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-        setError('');
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+  const googleSignIn = () => {
+    setIsLoading(true);
+    const googleProvider = new GoogleAuthProvider();
+    return signInWithPopup(auth, googleProvider);
+    // .then((result) => {
+    //   setUser(result.user);
+    // })
+    //   .finally(() => setIsLoading(false));
+    // history.push(redirect_uri);
+  };
+
+  const userLogin = (email, password, name) => {
+    return signInWithEmailAndPassword(auth, email, password).then((result) => {
+      //   const user = result.user;
+      //   console.log(user);
+      //   setError('');
+      //   history.push(redirect_uri);
+      // })
+      // .catch((error) => {
+      //   setError(error.message);
+      setUser();
+      // setUserName(name)
+    });
   };
 
   const setUserName = () => {
@@ -56,12 +78,16 @@ const useFirebase = () => {
   };
 
   const createNewUser = (email, password) => {
-    createUserWithEmailAndPassword(auth, email, password).then((result) => {
-      const user = result.user;
-      setError('');
-      setUser();
-      setUserName();
-    });
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        const user = result.user;
+        setError('');
+        setUser();
+        setUserName();
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
 
   const toggleLogin = (e) => {
@@ -70,6 +96,7 @@ const useFirebase = () => {
 
   const handleNameInput = (e) => {
     setName(e.target.value);
+    console.log(e.target.value);
   };
 
   const handleEmailInput = (e) => {
@@ -112,6 +139,9 @@ const useFirebase = () => {
     handlePasswordInput,
     toggleLogin,
     handleNameInput,
+    userLogin,
+    googleSignIn,
+    setError,
   };
 };
 

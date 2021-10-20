@@ -1,0 +1,14 @@
+.doctor {
+  border: none;
+}
+.doctor-image {
+  overflow: hidden;
+}
+
+.doctor-image img {
+  transition: all 1.5s ease;
+}
+
+.doctor-image:hover img {
+  transform: scale(1.2);
+}

@@ -22,12 +22,6 @@ const ServiceDetails = () => {
   }, [serviceDetails]);
 
   return (
-    // <div>
-    //   <h2>Service : {serviceId}</h2>
-    //   <img src={singleService?.img} alt="" />
-    //   <h2>{singleService?.name}</h2>
-    //   <p>{singleService?.description}</p>
-    // </div>
     <Container>
       <div
         className=""

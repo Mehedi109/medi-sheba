@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "name": "Abul Hossain",
+        "gender": "Male",
+        "specialities": "Cardiologist",
+        "country": "Pakistan",
+        "age": 30,
+        "salary": 5000,
+        "email": "abul45@gmail.com",
+        "picture": "https://i.ibb.co/w0HDVdM/photo-1612531386530-97286d97c2d2-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwx-Mj-A3f-DB8-MXxhb.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Monira Sultana",
+        "gender": "Female",
+        "specialities": "Dermatologist",
+        "country": "Australia",
+        "age": 45,
+        "salary": 6000,
+        "email": "monira22@gmail.com",
+        "picture": "https://i.ibb.co/RCp9bCN/photo-1559839734-2b71ea197ec2-ixlib-rb-1-2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Kamal Ahmed",
+        "gender": "Male",
+        "specialities": "ENT",
+        "country": "Bangladesh",
+        "age": 35,
+        "salary": 5000,
+        "email": "ahmedkamal@gmail.com",
+        "picture": "https://i.ibb.co/jrQbFsr/photo-1622253692010-333f2da6031d-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwx-Mj-A3f-DB8-MXxhb.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Sagor Chowdhury",
+        "gender": "Male",
+        "specialities": "ENT",
+        "country": "South Korea",
+        "age": 30,
+        "salary": 4000,
+        "email": "sagar100@gmail.com",
+        "picture": "https://i.ibb.co/K6hNgVc/photo-1622902046580-2b47f47f5471-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwx-Mj-A3f-DB8-MXxhb.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Lotif Chowdhury",
+        "gender": "Male",
+        "specialities": "Psychiatrist",
+        "country": "Canada",
+        "age": 33,
+        "salary": 5000,
+        "email": "lotif12@gmail.com",
+        "picture": "https://i.ibb.co/rQhwZZV/portrait-smiling-handsome-male-doctor-man-171337-5055.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Fatema Jahan",
+        "gender": "Female",
+        "specialities": "Neurologist",
+        "country": "USA",
+        "age": 28,
+        "salary": 4000,
+        "email": "fatema992@gmail.com",
+        "picture": "https://i.ibb.co/681VV8T/pleased-young-female-doctor-wearing-medical-robe-stethoscope-around-neck-standing-with-closed-postur.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Mustofa Ahmed",
+        "gender": "Male",
+        "specialities": " Cardiologist",
+        "country": "Bangladesh",
+        "age": 28,
+        "salary": 4000,
+        "email": "fatema992@gmail.com",
+        "picture": "https://i.ibb.co/NC3D7RC/portrait-smiling-male-doctor-171337-1532.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Jamal Hossain",
+        "gender": "Male",
+        "specialities": " Cardiologist",
+        "country": "India",
+        "age": 40,
+        "salary": 5500,
+        "email": "mustofa100@gmail.com",
+        "picture": "https://i.ibb.co/Ykxnxq5/doctor-with-co-workers-analyzing-x-ray-1098-581.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Ahbab Ahmed",
+        "gender": "Male",
+        "specialities": " Neurologist",
+        "country": "Australia",
+        "age": 60,
+        "salary": 7000,
+        "email": "sakib.22@gmail.com",
+        "picture": "https://i.ibb.co/nsHMLcZ/doctor-standing-with-folder-stethoscope-1291-16.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Shakhawat Ali",
+        "gender": "Male",
+        "specialities": " Gastroenterologist",
+        "country": "Canada",
+        "age": 50,
+        "salary": 6500,
+        "email": "shakhawat.22@gmail.com",
+        "picture": "https://i.ibb.co/nn8Mf4n/portrait-successful-mid-adult-doctor-with-crossed-arms-1262-12865.jpg"
+    }
+]
