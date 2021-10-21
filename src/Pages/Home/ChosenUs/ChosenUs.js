@@ -13,20 +13,18 @@ const ChosenUs = () => {
           <Col xs={12} md={8} lg={4} className="g-5">
             <div className="chosen">
               <CardGroup>
-                <Card className="d-flex p-3" style={{ height: '290px' }}>
-                  {/* <div className="doctor-image"> */}
+                <Card className="d-flex p-3 h-100" style={{ height: '290px' }}>
                   <Card.Img
                     variant="top"
                     src={img1}
                     style={{ height: '120px' }}
                   />
-                  {/* </div> */}
                   <Card.Body className="text-center">
                     <Card.Title>Standards Treatment</Card.Title>
                     <Card.Text>
-                      We provide quality treatment for our patients
+                      We provide quality treatment for our patients,we beleive
+                      in providing good service
                     </Card.Text>
-                    {/* <Button variant="btn btn-success">View</Button> */}
                   </Card.Body>
                 </Card>
               </CardGroup>
@@ -35,21 +33,18 @@ const ChosenUs = () => {
           <Col xs={12} md={8} lg={4} className="g-5">
             <div className="chosen">
               <CardGroup>
-                <Card className="d-flex p-3" style={{ height: '290px' }}>
-                  {/* <div className="doctor-image"> */}
+                <Card className="d-flex p-3 h-100" style={{ height: '290px' }}>
                   <Card.Img
                     variant="top"
                     src={img3}
                     style={{ height: '120px' }}
                   />
-                  {/* </div> */}
                   <Card.Body className="text-center">
                     <Card.Title>24/7 Services</Card.Title>
                     <Card.Text>
                       We are available for 24 hours in a day and 7 day in a week
                       for our patient
                     </Card.Text>
-                    {/* <Button variant="btn btn-success">View</Button> */}
                   </Card.Body>
                 </Card>
               </CardGroup>
@@ -58,20 +53,18 @@ const ChosenUs = () => {
           <Col xs={12} md={8} lg={4} className="g-5">
             <div className="chosen">
               <CardGroup>
-                <Card className="d-flex p-3" style={{ height: '290px' }}>
-                  {/* <div className="doctor-image"> */}
+                <Card className="d-flex p-3 h-100" style={{ height: '' }}>
                   <Card.Img
                     variant="top"
                     src={img2}
                     style={{ height: '120px' }}
                   />
-                  {/* </div> */}
                   <Card.Body className="text-center">
                     <Card.Title>Emergency Ambulance</Card.Title>
                     <Card.Text>
-                      We have emergency ambulance service for the patients
+                      We have emergency ambulance service for the patients who
+                      need ambulance
                     </Card.Text>
-                    {/* <Button variant="btn btn-success">View</Button> */}
                   </Card.Body>
                 </Card>
               </CardGroup>

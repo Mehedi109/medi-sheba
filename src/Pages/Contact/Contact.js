@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import './Contact.css';
 
 const Contact = () => {
   return (
@@ -9,6 +10,33 @@ const Contact = () => {
           <h2 className="h1-responsive font-weight-bold text-center my-4">
             Contact us
           </h2>
+          <div className="d-flex justify-content-center">
+            <div
+              className="col-md-3 text-center address"
+              style={{
+                marginLeft: '',
+                marginTop: '30px',
+                marginBottom: '60px',
+              }}
+            >
+              <ul className="list-unstyled mb-0">
+                <li>
+                  <i className="fas fa-map-marker-alt fa-2x"></i>
+                  <p>Central Road, Moulvibazar 3200</p>
+                </li>
+
+                <li>
+                  <i className="fas fa-phone mt-4 fa-2x"></i>
+                  <p>+8801746160411</p>
+                </li>
+
+                <li>
+                  <i className="fas fa-envelope mt-4 fa-2x"></i>
+                  <p>contact@medisheba.com</p>
+                </li>
+              </ul>
+            </div>
+          </div>
           <p className="text-center w-responsive mx-auto mb-5">
             Do you have any questions? Please do not hesitate to contact us
             directly. Our team will come back to you within a matter of hours to

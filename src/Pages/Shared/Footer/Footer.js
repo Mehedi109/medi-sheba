@@ -1,11 +1,12 @@
 import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
   return (
     <div>
       <footer className="bg-dark text-center text-white">
         <div className="container p-4">
-          <section className="mb-4">
+          <section className="mb-5">
             <a
               className="btn btn-outline-light btn-floating m-1"
               href="#!"
@@ -51,35 +52,6 @@ const Footer = () => {
             >
               <i className="fab fa-github"></i>
             </a>
-          </section>
-          <section className="">
-            <form action="" className="d-flex justify-content-center">
-              <div className="row justify-content-around ms-5">
-                <div className="col-auto">
-                  <p className="pt-2">
-                    <strong>Sign up for our newsletter</strong>
-                  </p>
-                </div>
-              </div>
-              <div className="col-md-5 col-12 d-flex justify-content-around">
-                <div className="form-outline form-white mb-4 ms-5 ">
-                  <input
-                    type="email"
-                    id="form5Example21"
-                    className="form-control"
-                  />
-                  <label className="form-label" for="form5Example21">
-                    Email address
-                  </label>
-                </div>
-
-                <div className="col-auto ms-5">
-                  <button type="submit" className="btn btn-outline-light mb-4">
-                    Subscribe
-                  </button>
-                </div>
-              </div>
-            </form>
           </section>
 
           <section className="">

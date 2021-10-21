@@ -9,6 +9,7 @@ const Services = () => {
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
+
   return (
     <div>
       <Container>

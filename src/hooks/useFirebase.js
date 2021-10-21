@@ -10,13 +10,12 @@ import {
   updateProfile,
 } from 'firebase/auth';
 import initializeAuthentication from '../Pages/Login/Firebase/firebase.init';
-import { useHistory, useLocation } from 'react-router';
 initializeAuthentication();
 
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [name, setName] = useState('');
-  const [email, setEmail] = useState();
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isLogin, setIsLogin] = useState(false);
@@ -24,12 +23,7 @@ const useFirebase = () => {
 
   const auth = getAuth();
 
-  // const location = useLocation();
-  // const history = useHistory();
-  // const redirect_uri = location.state?.from;
-
   const handleRegistration = (e) => {
-    // history.push(redirect_uri);
     e.preventDefault();
     if (password.length < 6) {
       setError('Password must be at least 6 charecters long');
@@ -40,11 +34,6 @@ const useFirebase = () => {
       return;
     }
 
-    // createUserWithEmailAndPassword(auth, email, password).then((result) => {
-    //   const user = result.user;
-    //   console.log(result.user);
-    // });
-
     isLogin ? userLogin(email, password) : createNewUser(email, password);
   };
 
@@ -52,24 +41,12 @@ const useFirebase = () => {
     setIsLoading(true);
     const googleProvider = new GoogleAuthProvider();
     return signInWithPopup(auth, googleProvider);
-    // .then((result) => {
-    //   setUser(result.user);
-    // })
-    //   .finally(() => setIsLoading(false));
-    // history.push(redirect_uri);
   };
 
-  const userLogin = (email, password, name) => {
-    return signInWithEmailAndPassword(auth, email, password).then((result) => {
-      //   const user = result.user;
-      //   console.log(user);
-      //   setError('');
-      //   history.push(redirect_uri);
-      // })
-      // .catch((error) => {
-      //   setError(error.message);
-      setUser();
-      // setUserName(name)
+  const userLogin = (email, password) => {
+    setIsLoading(true);
+    return signInWithEmailAndPassword(auth, email, password).catch((error) => {
+      setError(error.message);
     });
   };
 
@@ -78,6 +55,7 @@ const useFirebase = () => {
   };
 
   const createNewUser = (email, password) => {
+    setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         const user = result.user;
@@ -130,7 +108,6 @@ const useFirebase = () => {
     user,
     email,
     isLoading,
-    // signInUsingGoogle,
     logOut,
     error,
     handleRegistration,

@@ -1,0 +1,11 @@
+@media (max-width: 688px) {
+  .signup-field {
+    display: block;
+  }
+  .email-input {
+    display: block;
+  }
+  .d-flex {
+    display: block;
+  }
+}

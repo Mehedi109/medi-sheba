@@ -20,11 +20,8 @@ const Doctor = ({ doctor }) => {
             <Card.Body className="text-center">
               <Card.Title>{name}</Card.Title>
               <Card.Text>{specialities}</Card.Text>
-              <Button variant="btn btn-success">View</Button>
+              <Button variant="btn btn-success">Book Now</Button>
             </Card.Body>
-            {/* <Card.Footer className="bg-info">
-              <h6 className="text-center">View</h6>
-            </Card.Footer> */}
           </Card>
         </CardGroup>
       </div>

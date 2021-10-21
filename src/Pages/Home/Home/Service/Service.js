@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Container, Col, CardGroup } from 'react-bootstrap';
+import { Card, Col, CardGroup } from 'react-bootstrap';
 import { useHistory } from 'react-router';
 import './Service.css';
 
@@ -13,7 +13,6 @@ const Service = ({ service }) => {
     history.push(url);
   };
   return (
-    // <Container>
     <Col xs={12} md={8} lg={4} className="g-5">
       <div className="single-service">
         <CardGroup>
@@ -26,13 +25,9 @@ const Service = ({ service }) => {
             />
             <Card.Body>
               <Card.Title>{name}</Card.Title>
-              <Card.Text>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
+              <Card.Text>{description}</Card.Text>
             </Card.Body>
-            <Card.Footer>
+            <Card.Footer className="d-flex justify-content-center">
               <button
                 onClick={handleServiceDetails}
                 className="btn btn-primary"
@@ -44,7 +39,6 @@ const Service = ({ service }) => {
         </CardGroup>
       </div>
     </Col>
-    // </Container>
   );
 };
 

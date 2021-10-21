@@ -1,0 +1,16 @@
+@media (min-width: 689px) and (max-width: 1400px) {
+  .service-details {
+    width: 400px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 350px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 688px) {
+  .service-details {
+    margin-left: 15px;
+    margin-top: 40px;
+    width: 320px;
+  }
+}
